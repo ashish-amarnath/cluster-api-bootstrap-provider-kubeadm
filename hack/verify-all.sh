@@ -54,8 +54,8 @@ fi
 
 if [[ "${VERIFY_BOILERPLATE:-true}" == "true" ]]; then
   echo "[*] Verifying boilerplate..."
-  out=$(hack/verify_boilerplate.py)
-  failure $? "verify_boilerplate.py"
+  out=$(hack/verify-boilerplate.sh)
+  failure $? "verify-boilerplate.sh"
   cd "${REPO_PATH}"
 fi
 
